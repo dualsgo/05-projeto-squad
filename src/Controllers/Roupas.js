@@ -1,12 +1,12 @@
 import { openDb } from '../configDB.js';
 
-export async function slectRoupas(req, res) {
+export async function selectRoupas(req, res) {
   openDb().then((db) => {
     db.all('SELECT * FROM Roupas').then((roupas) => res.json(roupas));
   });
 }
 
-export async function slectRoupa(req, res) {
+export async function selectRoupa(req, res) {
   let id = req.params.id;
   openDb().then((db) => {
     db.get('SELECT * FROM Roupas WHERE id=?', [id]).then((entrada) =>

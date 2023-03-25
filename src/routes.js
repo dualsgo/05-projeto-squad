@@ -9,8 +9,8 @@ import {
 } from './Controllers/Funcionarios.js';
 
 import { insertRoupas,
-   slectRoupa, 
-   slectRoupas, 
+   selectRoupa, 
+   selectRoupas, 
    updateRoupas,
    deleteRoupa 
 } from './Controllers/Roupas.js';
@@ -63,8 +63,8 @@ router.delete('/funcionario/:id', deleteFuncionario);
 // Funcionarios
 
 // Roupas
-router.get('/roupas',slectRoupas)
-router.get('/roupa/:id',slectRoupa)
+router.get('/roupas',selectRoupas)
+router.get('/roupa/:id',selectRoupa)
 router.post('/roupas',insertRoupas)
 router.put('/roupas/:id',updateRoupas)
 router.delete('/roupas/:id',deleteRoupa)
